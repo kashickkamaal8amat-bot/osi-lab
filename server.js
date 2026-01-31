@@ -8,7 +8,7 @@ app.use(cookieParser());
 app.use(express.static("public"));
 // Root route fix
 app.get("/", (req, res) => {
-  res.redirect("/login.html");
+  res.sendFile(path.join(__dirname, "public/login.html"));
 });
 
 /* ❌ WEAK LOGIN LOGIC – LAYER 7 */
@@ -42,8 +42,12 @@ app.get("/admin.html", (req, res) => {
     res.send("Access denied");
   }
 });
-
-
+app.get("/health", (req, res) => {
+  res.send("OK");
+});
+process.on("uncaughtException", (err) => {
+  console.error("Error:", err);
+});
 
 app.listen(PORT, () => {
   console.log("🔥 OSI Lab running on port", PORT);
