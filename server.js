@@ -15,13 +15,11 @@ app.get("/", (req, res) => {
 app.post("/login", (req, res) => {
   const { username } = req.body;
 
-  // ❌ Password not checked
   if (username === "Indhupriya") {
-    // ❌ Weak session handling – Layer 5
     res.cookie("sessionid", "abc123xyz");
     res.redirect("/dashboard.html");
   } else {
-    res.send("User not found");
+    res.status(401).send("Unauthorized: Invalid user");
   }
 });
 
