@@ -37,13 +37,12 @@ app.post("/login", (req, res) => {
    - Any cookie value accepted
 ================================ */
 app.get("/dashboard.html", (req, res, next) => {
-  if (req.cookies.sessionid) {
-    next(); // 🔥 TRUSTS CLIENT COOKIE
+  if (Object.keys(req.cookies).length > 0) {
+    next(); // Any cookie grants access
   } else {
     res.status(401).send("Unauthorized");
   }
 });
-
 /* ===============================
    ❌ ADMIN AUTH VIA COOKIE VALUE
 ================================ */
