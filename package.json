@@ -6,7 +6,21 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "cookie-parser": "^1.4.6"
-  }
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.22.1"
+  },
+  "description": "\"# osi-lab\"",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashickkamaal8amat-bot/osi-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kashickkamaal8amat-bot/osi-lab/issues"
+  },
+  "homepage": "https://github.com/kashickkamaal8amat-bot/osi-lab#readme"
 }
