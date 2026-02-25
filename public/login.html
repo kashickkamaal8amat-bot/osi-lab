@@ -1,17 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSI Event Portal - JNN Institute</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    background: linear-gradient(to right, #8b0000, #c40000);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Glass Card */
+.login-container{
+    background:white;
+    width:400px;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+/* College Title */
+.college-title{
+    color:#c40000;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.subtitle{
+    font-size:14px;
+    color:gray;
+    margin-bottom:25px;
+}
+
+/* Event Title */
+.event-title{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:25px;
+    color:#333;
+}
+
+/* Inputs */
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#c40000;
+    outline:none;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:12px;
+    background:#c40000;
+    border:none;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#8b0000;
+}
+
+/* Footer */
+.footer{
+    margin-top:20px;
+    font-size:12px;
+    color:gray;
+}
+</style>
 </head>
+
 <body>
-<h2>College Portal Login</h2>
 
-<form method="POST" action="/login">
-  <input name="username" placeholder="Username" required><br><br>
-  <input name="password" type="password" placeholder="Password"><br><br>
-  <button type="submit">Login</button>
-</form>
+<div class="login-container">
 
-<!-- Hint: admin login available -->
+    <div class="college-title">
+        J.N.N Institute of Engineering
+    </div>
+    <div class="subtitle">
+        Autonomous | NAAC 'A' Grade
+    </div>
+
+    <div class="event-title">
+        OSI Event Login Portal
+    </div>
+
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Register Number / Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <div class="footer">
+        © 2026 JNN Institute of Engineering | OSI Department
+    </div>
+
+</div>
+
 </body>
 </html>
