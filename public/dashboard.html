@@ -252,12 +252,11 @@ function toggleMenu(){
 }
 
 /* Hidden Encoded Admin Route */
-const _x1 = "aHR0cDovL2xvY2FsaG9zdDozMDAwL2FkbWluLmh0bWw=";
-
-function _decodeSecret(){
-    return atob(_x1);
-}
-</script>
+const _x1 = "L2FkbWluLmh0bWw=";  // "/admin.html"
+function goToAdmin(){
+    const decodedPath = atob(_x1);
+    window.location.href = decodedPath;
+}</script>
 
 </body>
 </html>
